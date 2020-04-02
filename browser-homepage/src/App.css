@@ -4,3 +4,11 @@
   background-color: #E6E6F2;
   height: 100vh;
 }
+
+.background-circle {
+  position: absolute;
+  left: 200px;
+  top: -50px;
+  width: 600px;
+  height: 600px;
+}
