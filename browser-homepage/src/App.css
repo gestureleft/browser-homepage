@@ -1,3 +1,6 @@
 .App {
+  display: flex;
+  align-items: stretch;
   background-color: #E6E6F2;
+  height: 100vh;
 }
