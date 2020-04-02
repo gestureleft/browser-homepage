@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from './Todo.js';
+import Clock from './Clock.js';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <circle id="Ellipse_1" data-name="Ellipse 1" cx="444" cy="444" r="444" fill="#f2be42" />
       </svg>
       <Todo />
+      <Clock />
     </div>
   );
 }

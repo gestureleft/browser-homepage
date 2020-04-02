@@ -39,7 +39,6 @@
     bottom: 10px;
     height: 5%;
     width: 100%;
-    z-index: 1;
 }
 
 .TodoItem-container::-webkit-scrollbar {
