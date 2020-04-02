@@ -1,6 +1,32 @@
 .Todo {
     background-color: #4563EB;
     border-radius: 20px;
-    width: 300px;
     margin: 44px;
+    position: relative;
+    width: 300px;
+}
+
+.new-item-button {
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+}
+
+.new-item-button:focus {
+    outline: none;
+}
+
+.plus-icon {
+    fill: #65D1F9;
+    width: 25px;
+}
+
+.new-item-button, .plus-icon {
+    display: inline-block;
+    vertical-align: middle;
 }
