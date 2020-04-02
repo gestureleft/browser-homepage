@@ -1,0 +1,7 @@
+TODO List:
+ - Priorities
+ - Categories
+ - Due Dates (This Week, this month, today view)
+ - Sorting (sort by due date, or priority)
+ - Filtering (Filter by category, show done
+ - Checkboxes
