@@ -1,9 +1,49 @@
 .Todo {
     background-color: #4563EB;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     margin: 44px;
     position: relative;
     width: 300px;
+}
+
+.TodoItem-list-header {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px 10px 0 20px;
+}
+
+.TodoItem-container {
+    height: 100%;
+    margin: 0 0 10px 0;
+    overflow-y: scroll;
+}
+
+.TodoItem-container:before {
+    background: linear-gradient(to bottom, #4563EB, transparent);
+    content: '';
+    position: absolute;
+    top: 54px;
+    height: 5%;
+    width: 100%;
+    z-index: 1;
+}
+
+.TodoItem-container:after {
+    border-radius: 20px;
+    background: linear-gradient(to top, #4563EB, transparent);
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    height: 5%;
+    width: 100%;
+    z-index: 1;
+}
+
+.TodoItem-container::-webkit-scrollbar {
+    display: none;
 }
 
 .new-item-button {
@@ -15,6 +55,7 @@
     bottom: 15px;
     width: 45px;
     height: 45px;
+    z-index: 2;
 }
 
 .new-item-button:focus {

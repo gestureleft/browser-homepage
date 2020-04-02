@@ -1,0 +1,7 @@
+.TodoItem {
+    background-color: white;
+    border-radius: 10px;
+    opacity: .31;
+    margin: 20px;
+    height: 60px;
+}
