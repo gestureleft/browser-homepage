@@ -1,14 +1,13 @@
 .App {
-  display: flex;
-  align-items: stretch;
-  background-color: #E6E6F2;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
 }
 
-.background-circle {
+.green-rectangle {
+  top: 50%;
+  transform: translateY(-50%);
   position: absolute;
-  left: 200px;
-  top: -50px;
-  width: 600px;
-  height: 600px;
+  background-color: #5ED98F;
+  height: 80vh;
+  width: .8%; 
 }

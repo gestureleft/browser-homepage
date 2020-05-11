@@ -6,23 +6,41 @@ function Todo() {
 
     const [items, setItems] = React.useState([]);
 
+    function handleNewItem() {
+
+        let d = new Date();
+
+        console.log("clicked new item button");
+
+        setItems([{
+            value: "",
+            key: d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString() + d.getMilliseconds().toString()
+        }].concat(items));
+    }
+
+    function handleDeleteItem(i) {
+        if (i === 0) {
+            setItems(items.slice(1,items.length));
+        } else if (i === items.length) {
+            setItems(items.slice(i));
+        } else {
+            setItems(items.slice(i) + items.slice(i+1,items.length));
+        }
+    }
+
     return (
         <div className="Todo">
             <div className="TodoItem-list-header">
-                Todo List:
+                <h1>
+                    Tasks:
+                </h1>
             </div>
             <div className="TodoItem-container">
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
+            {items.map((item, index) =>
+            <TodoItem value={item.value} key={item.key} onClick={() => handleDeleteItem(index)} />
+        )}
             </div>
-            <button className="new-item-button"><svg className="plus-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            <button onClick={() => handleNewItem()} className="new-item-button"><svg className="plus-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 492 492" >
                 <path d="M465.064,207.566l0.028,0H284.436V27.25c0-14.84-12.016-27.248-26.856-27.248h-23.116
 			c-14.836,0-26.904,12.408-26.904,27.248v180.316H26.908c-14.832,0-26.908,12-26.908,26.844v23.248

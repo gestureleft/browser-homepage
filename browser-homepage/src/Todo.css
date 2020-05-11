@@ -1,72 +1,30 @@
 .Todo {
-    background-color: #4563EB;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: 44px;
+    padding: 2em;
+    height: 100vh;
+    color: #3A3A3A;
     position: relative;
-    width: 300px;
 }
 
 .TodoItem-list-header {
-    color: white;
-    font-size: 35px;
-    font-weight: 600;
-    padding: 10px 10px 0 20px;
-}
-
-.TodoItem-container {
-    height: 100%;
-    margin: 0 0 10px 0;
-    overflow-y: scroll;
-}
-
-.TodoItem-container:before {
-    background: linear-gradient(to bottom, #4563EB, transparent);
-    content: '';
-    position: absolute;
-    top: 54px;
-    height: 5%;
-    width: 100%;
-    z-index: 1;
-}
-
-.TodoItem-container:after {
-    border-radius: 20px;
-    background: linear-gradient(to top, #4563EB, transparent);
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    height: 5%;
-    width: 100%;
-}
-
-.TodoItem-container::-webkit-scrollbar {
-    display: none;
+    font-weight: 400;
+    padding-bottom: 2em;
 }
 
 .new-item-button {
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
+    border-radius: 100px;
     position: absolute;
-    right: 15px;
-    bottom: 15px;
-    width: 45px;
-    height: 45px;
-    z-index: 2;
-}
-
-.new-item-button:focus {
-    outline: none;
+    right: 0;
+    bottom: 0;
+    margin: 2em;
+    border: 0;
+    background-color: #3773FF;
+    width: 3em;
+    height: 3em;
 }
 
 .plus-icon {
-    fill: #65D1F9;
-    width: 25px;
-}
-
-.new-item-button, .plus-icon {
-    display: inline-block;
-    vertical-align: middle;
+    text-align: center;
+    fill: white;
+    width: 90%;
+    height: 90%;
 }

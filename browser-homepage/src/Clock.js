@@ -8,7 +8,7 @@ function Clock() {
 
     let intervalID;
 
-    React.useEffect(() => {
+    React.useState(() => {
         intervalID = setInterval(
             () => tick(),
             1000
