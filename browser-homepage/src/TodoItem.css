@@ -1,8 +1,16 @@
 .TodoItem {
+    margin: 8px 0px;
     display: flex;
 }
 
 .value-input {
+    font-size: 1.2em;
+    border: solid 1px grey;
     width: 80%;
-    background-color: grey;
+}
+
+.delete-button {
+    font-size: 1.2em;
+    background-color: white;
+    border: solid 1px grey;
 }

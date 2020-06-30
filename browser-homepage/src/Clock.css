@@ -8,11 +8,14 @@ h1, h2 {
     margin: 0;
 }
 
-h1 {
+.Clock h1 {
+    color: #757575;
+    font-size: 3em;
     padding-top: 10px;
 }
 
-h2 {
-    font-size: 15px;
+.Clock h2 {
+    color: #757575;
+    font-size: 1em;
     font-weight: 500;
 }

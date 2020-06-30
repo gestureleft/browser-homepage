@@ -19,12 +19,13 @@ function Todo() {
     }
 
     function handleDeleteItem(i) {
+        console.log("Handling delete");
         if (i === 0) {
             setItems(items.slice(1,items.length));
-        } else if (i === items.length) {
-            setItems(items.slice(i));
+        } else if (i === items.length-1) {
+            setItems(items.slice(0,i));
         } else {
-            setItems(items.slice(i) + items.slice(i+1,items.length));
+            setItems(items.slice(0,i).concat(items.slice(i+1)));
         }
     }
 

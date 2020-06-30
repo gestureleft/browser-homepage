@@ -10,4 +10,5 @@
   background-color: #5ED98F;
   height: 80vh;
   width: .8%; 
+  z-index: 1;
 }
