@@ -6,7 +6,7 @@ function TodoItem(props) {
         <div className="TodoItem">
             <input className="value-input" contentEditable="true">
             </input>
-            <button className="delete-button" onClick={() => props.onClick()}>delete</button>
+            <button className="delete-button" onClick={() => props.onClick()}>X</button>
         </div>
     );
 }

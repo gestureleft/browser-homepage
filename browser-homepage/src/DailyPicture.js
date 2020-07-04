@@ -9,7 +9,7 @@ import './DailyPicture.css';
 function DailyPicture(props) {
 
     return (
-        <div className="daily-picture-container">
+        <div className="daily-picture-image-container">
             <div className="daily-picture-header">
                 <h4>Photo of the day</h4>
                 <button onClick={() => props.handleDismiss()}><h4>X</h4></button>

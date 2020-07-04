@@ -12,3 +12,8 @@
   width: .8%; 
   z-index: 1;
 }
+
+.col-four-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
