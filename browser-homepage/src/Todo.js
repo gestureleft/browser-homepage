@@ -1,4 +1,6 @@
 import React from 'react';
+import firebase from 'firebase';
+
 import './Todo.css';
 import TodoItem from './TodoItem.js';
 
@@ -6,7 +8,7 @@ function Todo() {
 
     const [items, setItems] = React.useState([]);
 
-    function handleNewItem() {
+    const handleNewItem = () => {
 
         let d = new Date();
 
@@ -18,7 +20,7 @@ function Todo() {
         }].concat(items));
     }
 
-    function handleDeleteItem(i) {
+    const handleDeleteItem = (i) => {
         console.log("Handling delete");
         if (i === 0) {
             setItems(items.slice(1,items.length));
@@ -28,6 +30,8 @@ function Todo() {
             setItems(items.slice(0,i).concat(items.slice(i+1)));
         }
     }
+
+    var database = firebase.database();
 
     return (
         <div className="Todo">

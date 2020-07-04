@@ -6,7 +6,7 @@ import React from 'react';
 
 import DailyPicture from './DailyPicture.js';
 
-import { useFetchNasaImage } from './UseFetchNasaImage';
+import UseFetchNasaImage, { useFetchNasaImage } from './UseFetchNasaImage';
 
 const DailyPictureContainer = () => {
 
