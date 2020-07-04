@@ -1,0 +1,30 @@
+.daily-picture-container {
+    background: white;
+    margin: 5% 5%;
+}
+
+.daily-picture-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.daily-picture-header h4 {
+    color: #757575;
+    margin: 0;
+    padding-left: 2%;
+}
+
+.daily-picture-header button {
+    margin: 0;
+    border: 0;
+    height: 2em;
+    width: 2em;
+    padding-right: 2%;
+}
+
+#daily-picture {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 96%;
+    margin: 2%;
+}

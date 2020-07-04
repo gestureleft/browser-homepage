@@ -1,6 +1,7 @@
 import React from 'react';
 import Todo from './Todo.js';
 import Clock from './Clock.js';
+import DailyPictureContainer from './DailyPictureContainer.js';
 import './App.css';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
           <Todo />
       </div>
       <Clock />
+      <div></div>
+      <DailyPictureContainer />
     </div>
   );
 }
