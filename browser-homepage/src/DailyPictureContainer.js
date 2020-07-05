@@ -6,18 +6,18 @@ import React from 'react';
 
 import DailyPicture from './DailyPicture.js';
 
-import UseFetchNasaImage, { useFetchNasaImage } from './UseFetchNasaImage';
+import { useFetchNasaImage } from './UseFetchNasaImage';
 
 const DailyPictureContainer = () => {
 
 
-    const {url, loading} = useFetchNasaImage('https://api.nasa.gov/planetary/apod?api_key=MQ3fdEwBjHpJaX8bEboo4f8XZPVM58hy7OsoRql3');
+    const {imageData, loading} = useFetchNasaImage('https://api.nasa.gov/planetary/apod?api_key=MQ3fdEwBjHpJaX8bEboo4f8XZPVM58hy7OsoRql3');
     const [showImage, setShowImage] = React.useState(true);
 
     let renderContent = "";
 
     if(showImage) {
-        renderContent = loading ? "Loading.." : <DailyPicture imageURL={url} handleDismiss={() => setShowImage(false)}/>
+        renderContent = loading ? "Loading.." : <DailyPicture imageData={imageData} handleDismiss={() => setShowImage(false)}/>
     }
 
     return (

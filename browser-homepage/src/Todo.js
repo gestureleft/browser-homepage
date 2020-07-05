@@ -1,12 +1,46 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import firebase from 'firebase';
 
 import './Todo.css';
 import TodoItem from './TodoItem.js';
 
-function Todo() {
+import { UserContext } from './contexts/UserContext.js';
 
-    const [items, setItems] = React.useState([]);
+function Todo() {
+    const user = useContext(UserContext).state.user;
+    const [todos, setTodos] = useState([]);
+
+    const handleTodoInputChange = (index) => {
+        // TODO : Implement
+        console.log(index);
+    };
+
+    useEffect(() => {
+        const todosFbRef = firebase.firestore().collection('todos');
+        const query = todosFbRef.where('user', '==', user.uid);
+
+        query.get()
+            .then((eachTodo) => eachTodo.forEach(todoDoc => {
+                const data = todoDoc.data();
+                const d = new Date();
+                setTodos([{
+                    value: data.todo,
+                    key: d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString() + d.getMilliseconds().toString()
+                }].concat(todos));
+            })
+            )
+    }, [user]);
+
+    useEffect(() => {
+        todos.forEach(todoIn => {
+            firebase.firestore().collection('todos').doc().set({
+                user: user.uid,
+                todo: todoIn.value
+            });
+        });
+     }, [todos]);
+
+    console.log(todos);
 
     const handleNewItem = () => {
 
@@ -14,24 +48,22 @@ function Todo() {
 
         console.log("clicked new item button");
 
-        setItems([{
+        setTodos([{
             value: "",
             key: d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString() + d.getMilliseconds().toString()
-        }].concat(items));
+        }].concat(todos));
     }
 
     const handleDeleteItem = (i) => {
         console.log("Handling delete");
         if (i === 0) {
-            setItems(items.slice(1,items.length));
-        } else if (i === items.length-1) {
-            setItems(items.slice(0,i));
+            setTodos(todos.slice(1,todos.length));
+        } else if (i === todos.length-1) {
+            setTodos(todos.slice(0,i));
         } else {
-            setItems(items.slice(0,i).concat(items.slice(i+1)));
+            setTodos(todos.slice(0,i).concat(todos.slice(i+1)));
         }
     }
-
-    var database = firebase.database();
 
     return (
         <div className="Todo">
@@ -41,8 +73,8 @@ function Todo() {
                 </h1>
             </div>
             <div className="TodoItem-container">
-            {items.map((item, index) =>
-            <TodoItem value={item.value} key={item.key} onClick={() => handleDeleteItem(index)} />
+            {todos.map((item, index) =>
+            <TodoItem handleTodoChange={() => handleTodoInputChange(index)} value={item.value} key={item.key} handleDeleteButton={() => handleDeleteItem(index)} />
         )}
             </div>
             <button onClick={() => handleNewItem()} className="new-item-button"><svg className="plus-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

@@ -14,7 +14,7 @@ function DailyPicture(props) {
                 <h4>Photo of the day</h4>
                 <button onClick={() => props.handleDismiss()}><h4>X</h4></button>
             </div>
-            <img id="daily-picture" src={props.imageURL}></img>
+            <img id="daily-picture" src={props.imageData.hdurl} alt={props.imageData.description}></img>
         </div>
     );
 }
