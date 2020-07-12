@@ -1,0 +1,41 @@
+.TodoItem {
+    margin: 8px 0px;
+    display: flex;
+}
+
+.value-input {
+    flex-grow: 2;
+    background-color: #fafafa;
+    border-radius: 5px 0 0 5px;
+    border: solid 1px lightgrey;
+    border-right: 0;
+    font-size: 24px;
+    line-height: 100%;
+    padding: 10px;
+    width: 80%;
+}
+
+.value-input:focus {
+    outline: 0;
+}
+
+.delete-button:focus {
+    outline: 2px;
+    width: 64px;
+    background-color: #f3acac;
+}
+
+.delete-button:hover {
+    width: 64px;
+    transition: ease-in-out, width .35s ease-in-out;
+    background-color: #f3acac;
+}
+
+.delete-button {
+    transition: ease-in-out, width .35s ease-in-out;
+    font-size: 24px;
+    width: 32px;
+    background-color: lightred;
+    border: solid 1px lightgrey;
+    border-radius: 0 5px 5px 0;
+}

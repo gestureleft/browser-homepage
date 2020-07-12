@@ -1,6 +1,7 @@
 /*
     Contains the presentation for the Daily NASA image
 */
+import './DailyPicture.css'
 
 import React from 'react';
 

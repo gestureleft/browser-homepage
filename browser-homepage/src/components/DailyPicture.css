@@ -28,3 +28,16 @@
     width: 96%;
     margin: 2%;
 }
+
+.daily-picture-image-container {
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+    transition: ease-in-out, transform .35s ease-in-out;
+}
+
+.daily-picture-image-container:hover {
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+    transition: ease-in-out, transform .35s ease-in-out;
+    transform: translateY(-4px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+

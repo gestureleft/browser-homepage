@@ -1,0 +1,59 @@
+.Todo {
+    background-color: white;
+    color: #3A3A3A;
+    position: relative;
+    border-right: 1px solid lightgrey;
+}
+
+.Todo:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+}
+
+.Todo-scrollable {
+    height: calc(100vh - 64px);
+    padding: 1em 2em;
+    overflow-y: scroll;
+}
+
+.TodoItem-list-header {
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.new-item-button {
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2em;
+    border: 0;
+    background-color: #3773FF;
+    width: 3em;
+    height: 3em;
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.new-item-button:focus {
+    outline: 0;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.new-item-button:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+
+}
+
+.plus-icon {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+}

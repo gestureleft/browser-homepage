@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import firebase from 'firebase';
-import { firebaseConfig } from './AppConfig.js';
+import firebase from './firebase';
 
 export const useFirebaseLogin = (doLogIn) => {
 
@@ -8,8 +7,6 @@ export const useFirebaseLogin = (doLogIn) => {
 
     useEffect(() => {
         setState(state => ({ user: state.user, loggedIn: false }));
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
 
         var provider = new firebase.auth.GoogleAuthProvider();
 

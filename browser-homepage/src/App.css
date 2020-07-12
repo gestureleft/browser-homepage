@@ -1,20 +1,23 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar-container {
+  height: 64px;
+  background-color: white;
+  z-index: 1;
+}
+
+.main-content-container {
   display: grid;
   grid-template-columns: repeat(4, 25%);
+  height: 100%;
 }
 
 .hello-container h4 {
   padding: 20px;
-}
-
-.green-rectangle {
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  background-color: #5ED98F;
-  height: 80vh;
-  width: .8%; 
-  z-index: 1;
 }
 
 .col-four-container {
