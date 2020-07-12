@@ -11,7 +11,7 @@
 
 .Todo-scrollable {
     height: calc(100vh - 64px);
-    padding: 1em 2em;
+    padding: 32px;
     overflow-y: scroll;
 }
 
@@ -33,6 +33,7 @@
     background-color: #3773FF;
     width: 3em;
     height: 3em;
+    transition: ease-in-out, transform .35s ease-in-out;
     transition: ease-in-out, box-shadow .35s ease-in-out;
 }
 
@@ -40,12 +41,16 @@
     outline: 0;
     border: 1px solid black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
     transition: ease-in-out, box-shadow .35s ease-in-out;
+    transition: ease-in-out, transform .35s ease-in-out;
 }
 
 .new-item-button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
     transition: ease-in-out, box-shadow .35s ease-in-out;
+    transition: ease-in-out, transform .35s ease-in-out;
 
 }
 
