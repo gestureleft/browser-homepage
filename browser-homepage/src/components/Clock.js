@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Clock.css";
 
 function Clock() {
@@ -8,7 +8,7 @@ function Clock() {
 
     let intervalID;
 
-    React.useState(() => {
+    useState(() => {
         intervalID = setInterval(
             () => tick(),
             1000

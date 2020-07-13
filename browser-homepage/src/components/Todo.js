@@ -10,8 +10,6 @@ const useFetchTodos = (user) => {
 
     let [todos, setTodos] = useState([]);
 
-
-
     useEffect(() => {
         const unsubscribe = firebase.firestore().collection("todos").where("user", "==", user.uid).onSnapshot(
             data => {
