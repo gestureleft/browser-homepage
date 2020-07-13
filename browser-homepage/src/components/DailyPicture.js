@@ -7,15 +7,15 @@ import React from 'react';
 
 import './DailyPicture.css';
 
-function DailyPicture(props) {
+function DailyPicture({imageData, handleDismiss}) {
 
     return (
         <div className="daily-picture-image-container">
             <div className="daily-picture-header">
                 <h4>Photo of the day</h4>
-                <button onClick={() => props.handleDismiss()}><h4>X</h4></button>
+                <button onClick={() => handleDismiss()}><h4>X</h4></button>
             </div>
-            <img id="daily-picture" src={props.imageData.hdurl} alt={props.imageData.description}></img>
+            <img id="daily-picture" src={imageData.hdurl} alt={imageData.description}></img>
         </div>
     );
 }
