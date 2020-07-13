@@ -4,6 +4,7 @@ import Todo from './components/Todo.js';
 import Clock from './components/Clock.js';
 import DailyPictureContainer from './components/DailyPictureContainer.js';
 import Toolbar from './components/Toolbar.js';
+import Countdown from './components/Countdown.js';
 
 import { useFirebaseLogin } from './UseFirebaseLogin.js';
 
@@ -31,7 +32,9 @@ function App() {
           </div>
           <div className="hello-container"><h4>Welcome {user.displayName}</h4>
             <Clock /></div>
-          <div></div>
+          <div>
+            <Countdown />
+          </div>
           <div className="col-four-container">
             <DailyPictureContainer />
           </div>

@@ -16,7 +16,13 @@ const DailyPictureContainer = () => {
     let renderContent = "";
 
     if(showImage) {
-        renderContent = loading ? "Loading.." : <DailyPicture imageData={imageData} handleDismiss={() => setShowImage(false)}/>
+        renderContent = 
+            loading  // if
+            ? "Loading.." 
+            : 
+            imageData.media_type !== 'video'  // else if
+            ? <DailyPicture imageData={imageData} handleDismiss={() => setShowImage(false)}/>
+            : ""
     }
 
     return (

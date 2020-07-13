@@ -40,7 +40,7 @@ function Todo() {
                 <div className="TodoItem-list-header">
                     <h1>
                         Tasks:
-                </h1>
+                    </h1>
                 </div>
                 <div className="TodoItem-container">
                     {todos.map(todo =>

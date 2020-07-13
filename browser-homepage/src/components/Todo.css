@@ -1,8 +1,16 @@
+@keyframes example {
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(0)}
+}
+
 .Todo {
     background-color: white;
     color: #3A3A3A;
     position: relative;
     border-right: 1px solid lightgrey;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 .Todo:hover {
@@ -15,9 +23,23 @@
     overflow-y: scroll;
 }
 
+.Todo-scrollable::-webkit-scrollbar {
+    width: 1px;
+}
+
+.Todo-scrollable::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.30);
+}
+
+.Todo-scrollable::-webkit-scrollbar-thumb {
+    background: #3A3A3A;
+}
+
 .TodoItem-list-header {
     font-weight: 400;
     padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .new-item-button {

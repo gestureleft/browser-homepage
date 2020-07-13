@@ -15,7 +15,7 @@ function DailyPicture({imageData, handleDismiss}) {
                 <h4>Photo of the day</h4>
                 <button onClick={() => handleDismiss()}><h4>X</h4></button>
             </div>
-            <img id="daily-picture" src={imageData.hdurl} alt={imageData.description}></img>
+            <img id="daily-picture" src={imageData.url} alt={imageData.description}></img>
         </div>
     );
 }
