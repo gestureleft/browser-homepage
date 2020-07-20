@@ -30,9 +30,10 @@ function App() {
           <div className="todo-container">
             <Todo />
           </div>
-          <div className="hello-container"><h4>Welcome {user.displayName}</h4>
-            <Clock /></div>
-          <div>
+          <div className="col-two-container">
+            <Clock />
+          </div>
+          <div className="col-three-container">
             <Countdown />
           </div>
           <div className="col-four-container">

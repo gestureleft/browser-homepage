@@ -8,8 +8,6 @@ function TodoItem({ todo }) {
 
     const onInputChange = (e) => {
         const el = e.target;
-        //setTodoText(el.textContent);
-        console.log("Change!" + el.textContent);
         const db = firebase.firestore();
         db.collection("todos").doc(todo.id).set({...todo, todoText: el.textContent});
     }

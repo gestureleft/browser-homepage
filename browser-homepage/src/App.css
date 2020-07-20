@@ -16,8 +16,9 @@
   height: 100%;
 }
 
-.hello-container h4 {
-  padding: 20px;
+.col-three-container {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .col-four-container {
