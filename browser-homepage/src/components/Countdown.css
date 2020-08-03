@@ -1,16 +1,47 @@
+@keyframes calendar-in {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
 
 .countdown-container {
-    background-color: white;
-    color: #757575;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 8px;
-    margin-bottom: 16px;
-    border-radius: 5px 5px 0 0;
+  display: flex;
+  background-color: white;
+  color: #757575;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 5px 5px 0 0;
+}
+
+.countdown-container p {
+  padding: 5px;
+  margin: 0;
 }
 
 .calendar-container button {
     border: 0;
+}
+
+.cog {
+  align-items: center;
+  justify-content: center;
+}
+
+.cog-active {
+  transform: rotate(33deg);
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+.cog-inactive {
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+.countdown-settings-toggle {
+  border-radius: 50%;
+  display: flex;
 }
 
 .react-calendar {
@@ -39,8 +70,11 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    animation-name: calendar-in;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
   }
-  .react-calendar button {
+  .countdown-container button {
     margin: 0;
     border: 0;
     outline: none;
